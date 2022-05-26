@@ -1,0 +1,29 @@
+.project {
+    background-color: white;
+}
+
+.img {
+    background-color: #ffddcc;
+    height: 280px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descriptionBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.descriptionContainer {
+    width: 90%;
+}
+
+.title {
+    background-color: #ffe4e4;
+}
+
+.description {
+    background-color: #ffe4e4;
+}
