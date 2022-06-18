@@ -16,5 +16,5 @@ export const Footer = () => {
                 <div className={style.inscription}>2021 All rights reserved</div>
             </div>
         </div>
-    );
-};
+    )
+}

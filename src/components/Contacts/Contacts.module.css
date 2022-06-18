@@ -8,12 +8,23 @@
 .title {
     background-color: white;
 }
-.form{
-    width: 280px;
+.contactForm{
+    width: 50%;
+    background-color:lightblue ;
     display: flex;
     flex-direction: column;
-
+    align-items: center;
 }
-.textarea{
-    resize: none;
+.contactForm input, .contactForm textarea{
+    width: 100%;
+}
+
+.submitBtn {
+    padding: 10px 20px;
+    background-color: #ceffce;
+}
+@media screen and (max-width: 705px){
+    .contactForm {
+        width: 280px;
+    }
 }

@@ -5,15 +5,16 @@ import styleContainer from '../common/styles/container.module.css';
 export const Contacts = () => {
     return (
         <div className={style.contactsBlock}>
-            <div className={`${styleContainer.container} ${style.contactsContainer}`}>
+            <div className={`${style.contactsContainer} ${styleContainer.container}`}>
                 <h2 className={style.title}>Contacts</h2>
-                <form className={style.form}>
-                    <input/>
-                    <input/>
-                    <textarea className={style.textarea} />
+                <form className={style.contactForm}>
+                    <input type='text'/>
+                    <input type='text'/>
+                    <textarea className={style.textarea}/>
+                    <button type='submit' className={style.submitBtn}>Send</button>
                 </form>
-                <button>Send</button>
+
             </div>
         </div>
-    );
-};
+    )
+}

@@ -7,5 +7,5 @@ export const Header = () => {
         <div className={style.header}>
             <Nav/>
         </div>
-    );
+    )
 }

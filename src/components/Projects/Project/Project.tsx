@@ -21,5 +21,5 @@ export const Project: React.FC<ProjectPropsType> = ({title, description}) => {
 
 
         </div>
-    );
-};
+    )
+}

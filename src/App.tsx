@@ -17,7 +17,7 @@ function App() {
             <Contacts/>
             <Footer/>
         </div>
-    );
+    )
 }
 
-export default App;
+export default App

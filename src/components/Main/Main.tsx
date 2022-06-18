@@ -11,10 +11,10 @@ export const Main = () => {
                     <h1>I am Ilya Pasternak</h1>
                     <p>Frontend Developer</p>
                 </div>
-                <div className={style.mainPhoto}>
-                </div>
-            </div>
 
+                <div className={style.mainPhoto}
+                />
+            </div>
         </div>
-    );
+    )
 }
