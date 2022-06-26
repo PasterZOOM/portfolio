@@ -1,14 +1,21 @@
 import React from 'react'
 import style from './Header.module.scss'
 import {Nav} from './Nav/Nav'
-import styleContainer from '../common/styles/container.module.css'
 
 export const Header = () => {
     return (
-        <div className={style.header}>
-            <div className={styleContainer.container}>
+        <div className={style.headerBlock}>
+            <div className={style.headerContainer}>
+                <div className={style.left}>
+                    <a href={''}>
+                        <div className={style.logo}>
+
+                        </div>
+                    </a>
+                </div>
                 <Nav/>
             </div>
+
         </div>
     )
 }

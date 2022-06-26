@@ -1,6 +1,25 @@
 .nav {
-    border: 1px solid;
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
+  width: 380px;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    padding: 0 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: #777777;
+    text-transform: uppercase;
+    text-align: left;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  :hover {
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #bcbcbc;
+    color: #bcbcbc;
+    transition: 0.3s;
+  }
 }

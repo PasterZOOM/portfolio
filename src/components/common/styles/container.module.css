@@ -1,16 +1,17 @@
 .container {
-    border: 1px solid;
-    width: 80%;
+    width: 100%;
     min-height: 100%;
+    padding: 100px 0;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 
+/*
 @media screen and (max-width: 775px){
     .container {
         justify-content: center;
     }
-}
+}*/

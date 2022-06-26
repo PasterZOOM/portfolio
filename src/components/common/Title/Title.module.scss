@@ -1,0 +1,40 @@
+.titleBlock {
+  color: #494949;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+
+  h2 {
+    line-height: 24px;
+    color: #494949;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+
+  .horizontalLine {
+    height: 2px;
+    margin: 0 auto;
+    text-align: center;
+
+    .top {
+      background-color: #bcbcbc;
+
+      width: 44px;
+      height: 1.5px;
+      margin: 0 auto 3px;
+      text-align: center;
+    }
+
+    .bottom {
+      background-color: #bcbcbc;
+
+      width: 77px;
+      height: 1.5px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
