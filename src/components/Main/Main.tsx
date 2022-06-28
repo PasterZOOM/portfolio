@@ -10,7 +10,9 @@ export const Main = () => {
                     <h5>Hello, my name is</h5>
                     <h1>Ilya Pasternak</h1>
                     <p>Front-end developer</p>
-                    <Button name={'my work'}/>
+                    <div className={style.buttonBlock}>
+                        <Button name={'my work'}/>
+                    </div>
                 </div>
 
                 <div className={style.mainPhoto}>

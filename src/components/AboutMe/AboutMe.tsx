@@ -1,20 +1,32 @@
-import React from 'react';
+import React from 'react'
 import style from './AboutMe.module.scss'
-import styleContainer from '../common/styles/container.module.css';
-import {Skill} from '../Skills/Skill/Skill'
+import styleContainer from '../common/styles/container.module.scss'
 import {Title} from '../common/Title/Title'
+import {Button} from '../common/Button/Button'
+import {SkillBar} from '../common/SkillBar/SkillBar'
 
 export const AboutMe = () => {
     return (
-        <div className={style.skillsBlock}>
-            <div className={`${styleContainer.container} ${style.skillsContainer}`}>
+        <div className={style.aboutBlock}>
+            <div className={styleContainer.container}>
                 <Title titleName={'About me'}/>
-                <div className={style.skills}>
-                    <Skill title={'JS'} description={'JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions'}/>
-                    <Skill title={'CSS'} description={'CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed. This tutorial will teach you CSS from basic to advanced.'}/>
-                    <Skill title={'React'} description={'A JavaScript library for building user interfaces'}/>
-                    <Skill title={'React'} description={'A JavaScript library for building user interfaces'}/>
-                    <Skill title={'React'} description={'A JavaScript library for building user interfaces'}/>
+                <div className={style.aboutContainer}>
+                    <div className={style.mainText}>
+                        <h3>Howdy!</h3>
+                        <p>On the other hand, we denounce with righteous indignation and dislike men who are so
+                            beguiled and demoralized by th charms of pleasure of the moment, so blinded by desire,
+                            tht they cannot foresee the pain and trouble that are</p>
+                        <div className={style.buttonBlock}>
+                            <Button name={'Download my CV'}/>
+                        </div>
+                    </div>
+
+                    <div className={style.stat}>
+                        <div>
+                            <input type={'range'} value={90}/>
+                        </div>
+                        <SkillBar/>
+                    </div>
                 </div>
             </div>
         </div>

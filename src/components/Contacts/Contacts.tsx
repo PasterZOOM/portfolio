@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Contacts.module.scss'
-import styleContainer from '../common/styles/container.module.css';
+import styleContainer from '../common/styles/container.module.scss';
 
 export const Contacts = () => {
     return (
