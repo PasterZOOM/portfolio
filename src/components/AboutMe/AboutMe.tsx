@@ -22,9 +22,6 @@ export const AboutMe = () => {
                     </div>
 
                     <div className={style.stat}>
-                        <div>
-                            <input type={'range'} value={90}/>
-                        </div>
                         <SkillBar/>
                     </div>
                 </div>

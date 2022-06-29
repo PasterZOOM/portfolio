@@ -12,6 +12,7 @@ export const Projects = () => {
                 <div className={style.projects}>
                     <Project title={'todolist'} description={'to-do list app'}/>
                     <Project title={'social network'} description={'big social network'}/>
+                    <Project title={'social network'} description={'big social network'}/>
                 </div>
             </div>
         </div>
