@@ -9,7 +9,7 @@ export const Main = () => {
                 <div className={style.mainText}>
                     <h5>Hello, my name is</h5>
                     <h1>Ilya Pasternak</h1>
-                    <p>Front-end developer</p>
+                    <p>I'm a Front-end developer</p>
                     <div className={style.buttonBlock}>
                         <Button name={'my work'}/>
                     </div>

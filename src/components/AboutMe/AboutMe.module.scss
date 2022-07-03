@@ -1,63 +1,97 @@
 .aboutBlock {
   background-color: #ffffff;
+  padding: 100px 0;
+  margin: 0 auto;
 
-  .aboutContainer {
-    max-width: 1170px;
+  .mainTextAndStatContainer {
     display: flex;
-    padding: 0 15px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    @media screen and (max-width: 836px) {
-      justify-content: center;
-      text-align: center;
-    }
+    justify-content: center;
 
-    .mainText {
-      font-family: 'Poppins', sans-serif;
-      display: block;
-      line-height: 24px;
-      font-weight: 400;
-      position: relative;
-      width: 50%;
-
-      h3 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 22px;
-        color: #4F4F4F;
-        line-height: 24.2px;
-        margin: 0 0 15px;
-        font-weight: 700;
-      }
-
-      p {
-        font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
-        color: #6a6a6a;
-        margin: 0 0 15px;
-      }
-
-      .buttonBlock {
-        margin: 30px 0 0;
-      }
-
-      @media screen and (max-width: 1200px) {
-        width: 100%;
-        max-width: 415px;
-      }
-      @media screen and (max-width: 836px) {
-        max-width: 450px;
-      }
-      @media screen and (max-width: 570px) {
-        max-width: 270px;
-      }
-    }
-
-    .stat {
+    .aboutContainer {
+      width: 1170px;
+      display: flex;
       padding: 0 15px;
-      min-width: 395px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .mainText {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        line-height: 24px;
+        font-weight: 400;
+        position: relative;
+        width: 50%;
+        justify-content: start;
+
+        h3 {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 22px;
+          color: #4F4F4F;
+          line-height: 24.2px;
+          margin: 0 0 15px;
+          font-weight: 700;
+        }
+
+        p {
+          font-family: 'Poppins', sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 28px;
+          color: #6a6a6a;
+          margin: 0 0 15px;
+          width: 515px;
+          @media screen and (max-width: 1200px) {
+            width: 415px;
+          }
+          @media screen and (max-width: 992px) {
+            width: 305px;
+          }
+          @media screen and (max-width: 716px) {
+            width: 450px;
+            text-align: center;
+          }
+          @media screen and (max-width: 480px) {
+            width: 270px;
+          }
+        }
+
+        .buttonBlock {
+          margin: 30px 0 0;
+        }
+        @media screen and (max-width: 716px) {
+          align-items: center;
+          width: 100%;
+        }
+      }
+
+      .stat {
+
+        height: 200px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        @media screen and (max-width: 992px) {
+          width: 320px;
+        }
+        @media screen and (max-width: 716px) {
+          width: 480px;
+          padding: 0 15px;
+          margin-top: 50px;
+        }
+        @media screen and (max-width: 480px) {
+          width: 320px;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        justify-content: center;
+      }
     }
   }
 }
+
+
 

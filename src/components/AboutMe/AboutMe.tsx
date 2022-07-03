@@ -1,6 +1,5 @@
 import React from 'react'
 import style from './AboutMe.module.scss'
-import styleContainer from '../common/styles/container.module.scss'
 import {Title} from '../common/Title/Title'
 import {Button} from '../common/Button/Button'
 import {SkillBar} from '../common/SkillBar/SkillBar'
@@ -8,8 +7,8 @@ import {SkillBar} from '../common/SkillBar/SkillBar'
 export const AboutMe = () => {
     return (
         <div className={style.aboutBlock}>
-            <div className={styleContainer.container}>
-                <Title titleName={'About me'}/>
+            <Title titleName={'About me'}/>
+            <div className={style.mainTextAndStatContainer}>
                 <div className={style.aboutContainer}>
                     <div className={style.mainText}>
                         <h3>Howdy!</h3>
@@ -22,7 +21,9 @@ export const AboutMe = () => {
                     </div>
 
                     <div className={style.stat}>
-                        <SkillBar/>
+                        <SkillBar skill={'JavaScript / TypeScript'} percent={90}/>
+                        <SkillBar skill={'React / Redux'} percent={85}/>
+                        <SkillBar skill={'CSS3 / HTML5'} percent={80}/>
                     </div>
                 </div>
             </div>

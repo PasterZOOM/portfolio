@@ -11,7 +11,7 @@
       font-size: 14px;
       font-weight: 400;
       letter-spacing: 0.4px;
-      color: #6a6a6a;
+      color: #484848;
       text-transform: uppercase;
       text-align: left;
       text-decoration: none;
@@ -19,38 +19,34 @@
       display: block;
       line-height: 40px;
       cursor: pointer;
-      @media screen and (max-width: 635px) {
+      @media screen and (max-width: 716px) {
         padding: 15px 0;
       }
     }
     :hover{
       color: #bcbcbc;
     }
+    &:after {
+      background-color: #bcbcbc;
+      display: block;
+      position: relative;
+      content: "";
+      height: 2px;
+      width: 0;
+      top: -50%;
+      cursor: pointer;
+      transition: width 0.3s ease-in-out;
+    }
+    &:hover:after {
+      width: 100%;
+    }
+    &:focus:after {
+      width: 100%;
+    }
   }
 
-  .elementMenu::after {
-    background-color: #bcbcbc;
-    display: block;
-    position: relative;
-    content: "";
-    height: 2px;
-    width: 0;
-    top: -50%;
-    cursor: pointer;
-    -webkit-transition: width 0.3s ease-in-out;
-    -moz--transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
-  }
 
-  .elementMenu:hover:after {
-    width: 100%;
-  }
-
-  .elementMenu:focus:after {
-    width: 100%;
-  }
-
-  @media screen and (max-width: 635px) {
+  @media screen and (max-width: 716px) {
     flex-direction: column;
     align-items: center;
   }
