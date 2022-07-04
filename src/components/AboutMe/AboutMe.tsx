@@ -2,7 +2,7 @@ import React from 'react'
 import style from './AboutMe.module.scss'
 import {Title} from '../common/Title/Title'
 import {Button} from '../common/Button/Button'
-import {SkillBar} from '../common/SkillBar/SkillBar'
+import {SkillBar} from './SkillBar/SkillBar'
 
 export const AboutMe = () => {
     return (

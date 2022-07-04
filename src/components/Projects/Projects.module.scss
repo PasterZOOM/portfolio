@@ -6,12 +6,15 @@
     max-width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
-
     .projects {
       width: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-wrap: wrap;
+
+      @media screen and (max-width: 992px) {
+        justify-content: space-around;
+      }
     }
   }
 }

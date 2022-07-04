@@ -1,29 +1,128 @@
 .project {
-  background-color: white;
+  &:nth-child(3) {
+    @media screen and (max-width: 992px) {
+      margin-top: 50px;
+    }
+  }
+
+  &:nth-child(2) {
+    @media screen and (max-width: 716px) {
+      margin-top: 50px;
+    }
+  }
 
   .img {
-    background-color: #ffddcc;
-    height: 280px;
-    width: 280px;
+    height: 350px;
+    width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    background-size: 150%;
+    background-position: center;
+    position: relative;
+    transition: .4s ease-in-out;
 
-  .descriptionBlock {
-    display: flex;
-    justify-content: center;
+    &:before {
+      opacity: 0;
+      position: absolute;
+      content: '';
+      background-color: white;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: .4s ease-in-out;
+    }
 
-    .descriptionContainer {
-      width: 90%;
+    @media screen and (max-width: 1200px) {
+      height: 300px;
+      width: 300px;
+      transition: .4s ease-in-out;
+    }
+    @media screen and (max-width: 992px) {
+      height: 310px;
+      width: 310px;
+      transition: .4s ease-in-out;
+    }
+    @media screen and (max-width: 716px) {
+      height: 420px;
+      width: 420px;
+      transition: .4s ease-in-out;
+    }
+    @media screen and (max-width: 480px) {
+      height: 270px;
+      width: 270px;
+      transition: .4s ease-in-out;
+    }
 
-      .title {
-        background-color: #ffe4e4;
-      }
+    .zoomIcon {
+      background: rgba(73, 73, 73, .35);
+      border-radius: 50%;
+      font-size: 26px;
+      height: 60px;
+      width: 60px;
+      cursor: pointer;
+      position: relative;
+      opacity: 0;
+      z-index: 2;
+      transition: .4s ease-in-out;
 
-      .description {
-        background-color: #ffe4e4;
+      &:before {
+        position: absolute;
+        content: '\f0c1';
+        color: #fff;
+        top: 15px;
+        left: 15px;
+        display: block;
+        font-family: 'Font Awesome 5 Free', sans-serif;
+        font-weight: 900;
       }
     }
+
+    .title {
+      position: absolute;
+      bottom: 0;
+      text-align: left;
+      font-weight: 400;
+      left: 30px;
+      opacity: 0;
+      transition: .4s .3s ease-in-out;
+
+      a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        text-decoration: none;
+        color: #636363;
+      }
+
+      p {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        font-size: 14px;
+        color: #7F7F7FFF;
+      }
+    }
+  }
+
+  :hover {
+    background-size: 200%;
+    transition: background-size .5s ease-in-out;
+  }
+
+  :hover .zoomIcon {
+    opacity: 1;
+    transition: .4s ease-in-out;
+  }
+
+  :hover .title {
+    bottom: 40px;
+    opacity: 1;
+    transition: .4s .3s ease-in-out;
+  }
+
+
+  :hover::before {
+    opacity: 0.8;
+    transition: .4s ease-in-out;
   }
 }
