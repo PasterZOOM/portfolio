@@ -19,11 +19,12 @@ export const AboutMe = () => {
                             <Button name={'Download my CV'}/>
                         </div>
                     </div>
-
-                    <div className={style.stat}>
-                        <SkillBar skill={'JavaScript / TypeScript'} percent={90}/>
-                        <SkillBar skill={'React / Redux'} percent={85}/>
-                        <SkillBar skill={'CSS3 / HTML5'} percent={80}/>
+                    <div className={style.right}>
+                        <div className={style.stat}>
+                            <SkillBar skill={'JavaScript / TypeScript'} percent={90}/>
+                            <SkillBar skill={'React / Redux'} percent={85}/>
+                            <SkillBar skill={'CSS3 / HTML5'} percent={80}/>
+                        </div>
                     </div>
                 </div>
             </div>

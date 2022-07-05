@@ -3,7 +3,7 @@ import style from './Projects.module.scss'
 import styleContainer from '../common/styles/container.module.scss';
 import {Project} from './Project/Project';
 import {Title} from '../common/Title/Title'
-import socialNetwork from '../../image/social-network.png'
+import socialNetwork from '../../image/socialNetwork.jpg'
 import todolist from '../../image/todolist.jpg'
 import cards from '../../image/cards.jpg'
 

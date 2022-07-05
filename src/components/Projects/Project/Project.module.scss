@@ -20,7 +20,7 @@
     background-size: 150%;
     background-position: center;
     position: relative;
-    transition: .4s ease-in-out;
+    transition: .3s ease-in-out;
 
     &:before {
       opacity: 0;
@@ -31,7 +31,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      transition: .4s ease-in-out;
+      transition: .3s ease-in-out;
     }
 
     @media screen and (max-width: 1200px) {
@@ -58,9 +58,11 @@
     .zoomIcon {
       background: rgba(73, 73, 73, .35);
       border-radius: 50%;
+      display: inline-block;
       font-size: 26px;
       height: 60px;
       width: 60px;
+      line-height: 60px;
       cursor: pointer;
       position: relative;
       opacity: 0;
@@ -71,8 +73,8 @@
         position: absolute;
         content: '\f0c1';
         color: #fff;
-        top: 15px;
-        left: 15px;
+        width: 100%;
+        text-align: center;
         display: block;
         font-family: 'Font Awesome 5 Free', sans-serif;
         font-weight: 900;
@@ -111,7 +113,8 @@
 
   :hover .zoomIcon {
     opacity: 1;
-    transition: .4s ease-in-out;
+    color: #fff;
+    transition: .3s ease-in-out;
   }
 
   :hover .title {
@@ -120,9 +123,8 @@
     transition: .4s .3s ease-in-out;
   }
 
-
   :hover::before {
     opacity: 0.8;
-    transition: .4s ease-in-out;
+    transition: .3s ease-in-out;
   }
 }
