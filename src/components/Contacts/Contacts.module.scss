@@ -80,7 +80,7 @@
               outline: none;
               font-weight: 300;
               line-height: 26px;
-              color: #b3b3b3;
+              color: #494949;
               border: none;
               border-bottom: 1px solid #d9d9d9;
               padding: 5px 0;
@@ -113,7 +113,7 @@
               outline: none;
               font-weight: 300;
               line-height: 26px;
-              color: #b3b3b3;
+              color: #494949;
               border: none;
               border-bottom: 1px solid #d9d9d9;
               padding: 5px 0;
@@ -143,10 +143,11 @@
         .message {
           padding: 0 15px;
           textarea {
+            outline: none;
             max-height: 148px;
             font-weight: 300;
             line-height: 26px;
-            color: #b3b3b3;
+            color: #494949;
             border: 1px solid #d9d9d9;
             border-radius: 0;
             box-shadow: none;
