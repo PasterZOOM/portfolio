@@ -1,0 +1,48 @@
+.content {
+  width: 100%;
+  margin: 0 0 25px;
+  .icon {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #a8a8a8;
+    border-radius: 50%;
+    float: left;
+    font-size: 24px;
+    height: 47px;
+    line-height: 47px;
+    margin-right: 12px;
+    text-align: center;
+    width: 47px;
+    color: #919191;
+
+    &:before {
+      width: 100%;
+      position: absolute;
+      content: '\f095';
+      display: block;
+      font-family: 'Font Awesome 5 Free', sans-serif;
+      font-weight: 900;
+    }
+  }
+
+  h4 {
+    margin: 0;
+    position: relative;
+    top: 5px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #7b7b7b;
+  }
+
+  span {
+    color: #979797;
+    position: relative;
+    top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+}

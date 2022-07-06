@@ -1,10 +1,7 @@
 .titleBlock {
   color: #494949;
-  width: 100%;
-  text-align: center;
+  margin: 0 auto 60px;
   text-transform: uppercase;
-  margin-bottom: 60px;
-
   h2 {
     line-height: 24px;
     color: #494949;
@@ -19,21 +16,18 @@
   .horizontalLine {
     height: 2px;
     margin: 0 auto;
-    text-align: center;
 
     .top {
       background-color: #bcbcbc;
       width: 44px;
       height: 1.5px;
-      margin: 0 auto 3px;
-      text-align: center;
+      margin: 0 auto 5px;
     }
 
     .bottom {
       background-color: #bcbcbc;
       width: 77px;
       height: 1.5px;
-      text-align: center;
       margin: 0 auto;
     }
   }

@@ -15,12 +15,8 @@ export const Project: React.FC<ProjectPropsType> = ({style, title, description})
                     <a href=""></a>
                 </div>
                 <div className={styles.title}>
-
                         <a href="">{title}</a>
-
                         <p>{description}</p>
-
-
                 </div>
             </div>
         </div>
