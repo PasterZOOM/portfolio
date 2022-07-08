@@ -1,11 +1,13 @@
+@import "../../common/styles/scss/variables";
+
 .footerBlock {
-  background-color: #ffffff;
+  background-color: $secondBgColor;
   padding: 20px 0;
   display: flex;
   justify-content: center;
 
   .footerContainer {
-    width: 1170px;
+    width: $containerWidth;
     display: flex;
     padding: 0 15px;
     justify-content: space-between;
@@ -24,7 +26,7 @@
         font-size: 13px;
         font-weight: 400;
         letter-spacing: 0.4px;
-        color: #919191;
+        color: $paragraphTextColor;
       }
     }
 
@@ -40,7 +42,7 @@
           font-size: 13px;
           font-weight: 400;
           letter-spacing: 0.4px;
-          color: #919191;
+          color: $textColor;
           text-transform: uppercase;
           text-align: left;
           text-decoration: none;
@@ -51,7 +53,7 @@
         }
 
         :hover {
-          color: #000000;
+          color: $titleTextColor;
         }
       }
       @media screen and (max-width: 427px) {

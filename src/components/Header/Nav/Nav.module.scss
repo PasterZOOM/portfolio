@@ -1,3 +1,5 @@
+@import "../../../common/styles/scss/variables";
+
 .nav {
   width: 460px;
   display: flex;
@@ -11,7 +13,7 @@
       font-size: 14px;
       font-weight: 400;
       letter-spacing: 0.4px;
-      color: #484848;
+      color: $paragraphTextColor;
       text-transform: uppercase;
       text-align: left;
       text-decoration: none;
@@ -24,10 +26,10 @@
       }
     }
     :hover{
-      color: #bcbcbc;
+      color: $textColor;
     }
     &:after {
-      background-color: #bcbcbc;
+      background-color: $textColor;
       display: block;
       position: relative;
       content: "";

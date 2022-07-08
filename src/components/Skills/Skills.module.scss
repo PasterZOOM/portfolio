@@ -1,7 +1,9 @@
+@import "../../common/styles/scss/variables";
+
 .skillsBlock {
-  background-color: #ffffff;
+  background-color: $secondBgColor;
   .skillsContainer {
-    max-width: 1170px;
+    max-width: $containerWidth;
     @media screen and (max-width: 1200px) {
       max-width: 970px;
     }

@@ -1,11 +1,12 @@
+@import "../../../common/styles/scss/variables";
+
 .titleBlock {
-  color: #494949;
   margin: 0 auto 60px;
   text-transform: uppercase;
   text-align: center;
   h2 {
     line-height: 24px;
-    color: #494949;
+    color: $titleTextColor;
     text-transform: uppercase;
     margin: 0 0 15px;
     font-size: 32px;
@@ -19,14 +20,14 @@
     margin: 0 auto;
 
     .top {
-      background-color: #bcbcbc;
+      background-color: $lineColor;
       width: 44px;
       height: 1.5px;
       margin: 0 auto 5px;
     }
 
     .bottom {
-      background-color: #bcbcbc;
+      background-color: $lineColor;
       width: 77px;
       height: 1.5px;
       margin: 0 auto;

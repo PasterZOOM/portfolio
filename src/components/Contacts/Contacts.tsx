@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Contacts.module.scss'
-import styleContainer from '../common/styles/container.module.scss'
+import styleContainer from '../../common/styles/container.module.scss'
 import {Contact} from './Contact/Contact'
 import {Button} from '../common/Button/Button'
 

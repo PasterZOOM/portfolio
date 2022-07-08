@@ -1,9 +1,11 @@
+@import "../../../common/styles/scss/variables";
+
 .skillBar {
   margin: 0 0 28px;
   width: 100%;
 
   .progressTitleHolder {
-    color: #5e5e5e;
+    color: $progressTitleColor;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     position: relative;
@@ -21,7 +23,7 @@
 
 
       .progressMark {
-        color: #5e5e5e;
+        color: $progressTitleColor;
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
         margin: 0 0 15px;
@@ -34,9 +36,9 @@
         }
 
         &:after {
-          background: #484848 none repeat scroll 0 0;
+          background: $titleTextColor;
           border-radius: 50%;
-          box-shadow: 0 0 0 4px #4848487F;
+          box-shadow: 0 0 0 4px $progressMarkShadowColor;
           content: "";
           height: 14px;
           position: absolute;
@@ -52,21 +54,12 @@
   .progressOuter {
     height: 7px;
     border-radius: 3px;
-    background-color: #c8c8c8;
+    background-color: $lineColor;
 
     .progressContent {
       height: 7px;
       border-radius: 3px;
-      background-color: #484848;
+      background-color: $titleTextColor;
     }
-  }
-}
-
-@keyframes show {
-  from {
-    right: 100%;
-  }
-  to {
-    right: 0;
   }
 }
