@@ -105,20 +105,21 @@
         @media screen and (max-width: 716px) {
           align-items: center;
         }
+
         .nameEmail {
           width: 100%;
           padding: 0 15px;
-          display: flex;
-          justify-content: start;
           @media screen and (max-width: 716px) {
-            flex-direction: column;
+            @include flexColumn();
           }
+
           .name, .email {
             padding: 0 15px;
             width: 50%;
             @media screen and (max-width: 716px) {
               width: 100%;
             }
+
             input {
               @include text($montserrat, 16px, 300, $titleTextColor);
               width: 100%;
@@ -134,6 +135,7 @@
         .message {
           padding: 0 30px;
           width: 100%;
+
           textarea {
             @include text($montserrat, 16px, 300, $titleTextColor);
             width: 100%;

@@ -1,17 +1,13 @@
 @import "../../../common/styles/scss/variables";
+@import "../../../common/styles/scss/mixins";
 
 .buttonBlock{
   button {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: $buttonTextColor;
+    @include text($montserrat, 14px, 700, $buttonTextColor);
     padding: 0 50px;
     background-color: $buttonColor;
-    border: 0 none;
     border-radius: 5px;
-    height: 47px;
-    line-height: 50px;
+    min-height: 47px;
     text-transform: uppercase;
     transition: 0.4s;
   }
