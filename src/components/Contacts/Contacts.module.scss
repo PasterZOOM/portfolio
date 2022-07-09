@@ -109,6 +109,7 @@
         .nameEmail {
           width: 100%;
           padding: 0 15px;
+          @include flex(space-between);
           @media screen and (max-width: 716px) {
             @include flexColumn();
           }
