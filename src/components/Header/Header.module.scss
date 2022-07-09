@@ -1,23 +1,15 @@
 @import "../../common/styles/scss/variables";
+@import "../../common/styles/scss/mixins";
 
 .headerBlock {
-  top: 0;
-  width: 100%;
-  z-index: 99;
-  left: 0;
+  @include flex(center);
   background-color: $firstBgColor;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  display: flex;
-  justify-content: center;
+  padding: 50px 0;
 
   .headerContainer {
+    @include flex(space-between);
     width: $containerWidth;
-    display: flex;
     padding: 0 15px;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
     .left {
       a {
         .logo {

@@ -1,32 +1,23 @@
 @import "../../common/styles/scss/variables";
+@import "../../common/styles/scss/mixins";
 
 .mainBlock {
   background-color: $firstBgColor;
 
   .mainContainer {
-    width: $containerWidth;
+    @include flex(space-between);
+    max-width: $containerWidth;
     margin: 0 auto;
-    display: flex;
     padding: 0 15px;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
 
     .mainText {
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      line-height: 24px;
-      font-weight: 400;
+      @include flexColumn();
 
       h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 44px;
-        font-weight: 700;
-        color: $titleTextColor;
+        @include text($montserrat, 44px, 700, $titleTextColor);
         text-transform: uppercase;
         margin: 0 0 15px;
+
         @media screen and (max-width: 992px) {
           font-size: 38px;
         }
@@ -37,27 +28,21 @@
       }
 
       h5 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
-        color: $textColor;
-        letter-spacing: 1px;
-        line-height: 17.6px;
-        margin: 0 0 15px;
-        font-weight: 700;
+        @include text($montserrat, 16px, 700, $textColor);
         text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0 0 15px;
       }
 
       p {
-        font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
-        color: $paragraphTextColor;
+        @include text($poppins, 16px, 400, $paragraphTextColor);
         margin: 0 0 15px;
       }
+
       .buttonBlock {
         margin: 40px 0 0;
       }
+
       @media screen and (max-width: 716px) {
         text-align: center;
         align-items: center;
@@ -85,6 +70,7 @@
         height: 482px;
       }
     }
+
     @media screen and (max-width: 716px) {
       justify-content: center;
     }

@@ -1,50 +1,40 @@
 @import "../../../common/styles/scss/variables";
+@import "../../../common/styles/scss/mixins";
 
 .skillBar {
   margin: 0 0 28px;
   width: 100%;
 
   .progressTitleHolder {
-    color: $progressTitleColor;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    @include text($montserrat, 14px, 700, $progressTitleColor);
     position: relative;
-    font-size: 14px;
-    text-transform: uppercase;
-    height: 15px;
     margin: 0 0 15px;
 
-
     .progressTitle {
-
+      text-transform: uppercase;
     }
 
     .progressWrapper {
-
-
       .progressMark {
-        color: $progressTitleColor;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
         margin: 0 0 15px;
 
         .percent {
-          margin: 0 0 15px;
           position: absolute;
           right: -10px;
           bottom: -15px;
+          margin: 0 0 15px;
         }
 
         &:after {
+          position: absolute;
+          content: "";
           background: $titleTextColor;
           border-radius: 50%;
           box-shadow: 0 0 0 4px $progressMarkShadowColor;
-          content: "";
+          width: 14px;
           height: 14px;
-          position: absolute;
           right: 0;
           bottom: -25px;
-          width: 14px;
         }
       }
     }

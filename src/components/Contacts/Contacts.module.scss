@@ -1,185 +1,156 @@
 @import "../../common/styles/scss/variables";
+@import "../../common/styles/scss/mixins";
 
 .contactsBlock {
   background-color: $firstBgColor;
 
   .contactsContainer {
+    @include flex(space-between);
     max-width: $containerWidth;
+    margin: 0 auto;
+    padding: 100px 0;
+    @media screen and (max-width: 1200px) {
+      max-width: 970px;
+    }
+    @media screen and (max-width: 992px) {
+      max-width: 750px;
+    }
+    @media screen and (max-width: 716px) {
+      max-width: 480px;
+    }
+    @media screen and (max-width: 480px) {
+      max-width: 330px;
+    }
 
     .touch {
       width: 390px;
       padding: 0 15px;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
+      @include flexColumn();
+      @media screen and (max-width: 1200px) {
+        width: 323px;
+      }
+      @media screen and (max-width: 992px) {
+        width: 350px;
+      }
+      @media screen and (max-width: 716px) {
+        width: 100%;
+      }
 
       .titleBlock {
         margin: 0 0 30px;
+        @media screen and (max-width: 716px) {
+          text-align: center;
+        }
 
         h2 {
-          line-height: 1.1;
-          color: $titleTextColor;
+          @include text($montserrat, 32px, 700, $titleTextColor);
           text-transform: uppercase;
           margin: 0 0 15px;
-          font-size: 32px;
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 700;
         }
 
         .horizontalLine {
           height: 2px;
           margin: 0 0 20px;
 
+
           .top {
             background-color: $lineColor;
             width: 44px;
             height: 1.5px;
             margin: 0 0 5px;
+            @media screen and (max-width: 716px) {
+              margin: 0 auto 5px;
+            }
           }
 
           .bottom {
             background-color: $lineColor;
             width: 77px;
             height: 1.5px;
-
+            @media screen and (max-width: 716px) {
+              margin: 0 auto 5px;
+            }
           }
         }
 
         p {
-          margin: 0 0 15px;
-          color: $paragraphTextColor;
-          font-family: 'Poppins', sans-serif;
-          font-size: 14px;
+          @include text($poppins, 14px, 400, $paragraphTextColor);
           line-height: 24px;
-          font-weight: 400;
+          margin: 0 0 15px;
         }
       }
 
       .contacts {
         width: 360px;
-        margin: 0 0 10px;
       }
     }
 
     form {
       width: 780px;
       padding: 0 15px;
+      @media screen and (max-width: 1200px) {
+        width: 616px;
+      }
+      @media screen and (max-width: 992px) {
+        width: 350px;
+      }
+      @media screen and (max-width: 716px) {
+        width: 100%;
+      }
 
       .contactForm {
         margin: 0 auto;
-        width: 503px;
+        max-width: 503px;
         padding-top: 40px;
-
+        @include flexColumn();
+        @media screen and (max-width: 716px) {
+          align-items: center;
+        }
         .nameEmail {
+          width: 100%;
+          padding: 0 15px;
           display: flex;
           justify-content: start;
-
-          .name {
-            padding: 0 15px;
-            width: 256px;
-            input {
-              outline: none;
-              font-weight: 300;
-              line-height: 26px;
-              color: $titleTextColor;
-              border: none;
-              border-bottom: 1px solid $lineColor;
-              padding: 5px 0;
-              border-radius: 0;
-              box-shadow: none;
-              margin-bottom: 0;
-              width: 100%;
-              font-family: inherit;
-              font-size: inherit;
-              text-transform: none;
-              text-indent: 0;
-              text-shadow: none;
-              display: inline-block;
-              text-align: start;
-              appearance: auto;
-              -webkit-rtl-ordering: logical;
-              cursor: text;
-              background-color: transparent;
-              letter-spacing: normal;
-              word-spacing: normal;
-              text-rendering: auto;
-              writing-mode: horizontal-tb !important;
-            }
+          @media screen and (max-width: 716px) {
+            flex-direction: column;
           }
-
-          .email {
+          .name, .email {
             padding: 0 15px;
-            width: 256px;
-            input {
-              outline: none;
-              font-weight: 300;
-              line-height: 26px;
-              color: $titleTextColor;
-              border: none;
-              border-bottom: 1px solid $lineColor;
-              padding: 5px 0;
-              border-radius: 0;
-              box-shadow: none;
-              margin-bottom: 0;
+            width: 50%;
+            @media screen and (max-width: 716px) {
               width: 100%;
-              font-family: inherit;
-              font-size: inherit;
-              text-transform: none;
-              text-indent: 0;
-              text-shadow: none;
-              display: inline-block;
-              text-align: start;
-              appearance: auto;
-              -webkit-rtl-ordering: logical;
-              cursor: text;
+            }
+            input {
+              @include text($montserrat, 16px, 300, $titleTextColor);
+              width: 100%;
+              outline: none;
               background-color: transparent;
-              letter-spacing: normal;
-              word-spacing: normal;
-              text-rendering: auto;
-              writing-mode: horizontal-tb !important;
+              line-height: 26px;
+              @include border(none, none, $borderLine, none);
+              padding: 5px 0;
             }
           }
         }
 
         .message {
           padding: 0 15px;
+
           textarea {
-            outline: none;
-            max-height: 148px;
-            font-weight: 300;
-            line-height: 26px;
-            color: $titleTextColor;
-            border: 1px solid $lineColor;
-            border-radius: 0;
-            box-shadow: none;
-            margin-bottom: 0;
-            padding: 10px 20px;
+            @include text($montserrat, 16px, 300, $titleTextColor);
             width: 100%;
-            margin-top: 50px;
-            font-family: inherit;
-            font-size: inherit;
-            overflow: auto;
-            writing-mode: horizontal-tb !important;
-            text-rendering: auto;
-            letter-spacing: normal;
-            word-spacing: normal;
-            text-transform: none;
-            text-indent: 0;
-            text-shadow: none;
-            display: inline-block;
-            text-align: start;
-            appearance: auto;
-            -webkit-rtl-ordering: logical;
-            resize: none;
-            cursor: text;
-            white-space: pre-wrap;
-            overflow-wrap: break-word;
+            outline: none;
             background-color: transparent;
-            column-count: initial !important;
+            max-height: 148px;
+            margin-top: 50px;
+            resize: none;
+            border: $borderLine;
+            padding: 10px 20px;
           }
-          .button{
-            margin: 30px 0 0;
-          }
+        }
+
+        .button {
+          padding: 0 15px;
+          margin: 30px 0 0;
         }
       }
     }

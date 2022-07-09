@@ -1,59 +1,45 @@
 @import "../../common/styles/scss/variables";
+@import "../../common/styles/scss/mixins";
 
 .footerBlock {
   background-color: $secondBgColor;
   padding: 20px 0;
-  display: flex;
-  justify-content: center;
+  @include flex(center);
 
   .footerContainer {
     width: $containerWidth;
-    display: flex;
     padding: 0 15px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @include flex(space-between);
 
     @media screen and (max-width: 427px) {
       justify-content: center;
       text-align: center;
     }
     .inscription {
-      p {
+      span {
+        @include text($montserrat, 13px, 400, $paragraphTextColor);
         min-width: 130px;
-        padding: 0;
-        margin: 0;
-        font-family: Montserrat, sans-serif;
-        font-size: 13px;
-        font-weight: 400;
         letter-spacing: 0.4px;
-        color: $paragraphTextColor;
       }
     }
 
     .items {
-      width: 250px;
-      display: flex;
-      justify-content: space-between;
+      width: 260px;
+      @include flex(space-between);
 
       .item {
         a {
-          padding: 0 15px;
-          font-family: Montserrat, sans-serif;
-          font-size: 13px;
-          font-weight: 400;
-          letter-spacing: 0.4px;
-          color: $textColor;
-          text-transform: uppercase;
-          text-align: left;
-          text-decoration: none;
-          transition: 0.3s;
-          display: block;
+          @include text($montserrat, 13px, 400, $textColor);
           line-height: 19px;
-          cursor: pointer;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 0 15px;
+          transition: 0.4s;
         }
 
         :hover {
           color: $titleTextColor;
+          transition: 0.4s;
         }
       }
       @media screen and (max-width: 427px) {

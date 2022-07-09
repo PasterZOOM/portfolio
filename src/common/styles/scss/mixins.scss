@@ -1,0 +1,46 @@
+@import './variables';
+
+@mixin text($fontFamily, $fountSize, $fontWeight, $color) {
+  font-family: $fontFamily;
+  font-size: $fountSize;
+  font-weight: $fontWeight;
+  color: $color;
+  letter-spacing: 0.4px;
+}
+
+@mixin border($borderTop, $borderRight, $borderBottom, $borderLeft) {
+  border-top: $borderTop;
+  border-right: $borderRight;
+  border-bottom: $borderBottom;
+  border-left: $borderLeft;
+}
+
+@mixin flex($justifyContent) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flexColumn() {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+@mixin icon ($content, $size, $border, $background) {
+  border-radius: 50%;
+  height: $size;
+  width: $size;
+  line-height: $size;
+  position: relative;
+  text-align: center;
+  border: $border;
+  background: $background;
+
+  &:before {
+    width: 100%;
+    position: absolute;
+    content: $content;
+    display: block;
+  }
+}

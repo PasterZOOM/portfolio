@@ -1,48 +1,42 @@
 @import "../../../common/styles/scss/variables";
+@import "../../../common/styles/scss/mixins";
 
 .nav {
   width: 460px;
   display: flex;
   justify-content: space-between;
-
   .elementMenu {
 
     a {
-      padding: 0 5px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      letter-spacing: 0.4px;
-      color: $paragraphTextColor;
+      @include text($montserrat, 14px, 400, $paragraphTextColor);
       text-transform: uppercase;
-      text-align: left;
       text-decoration: none;
+      padding: 0 5px;
       transition: 0.3s;
-      display: block;
       line-height: 40px;
-      cursor: pointer;
       @media screen and (max-width: 716px) {
         padding: 15px 0;
       }
     }
-    :hover{
+
+    :hover {
       color: $textColor;
+      transition: 0.3s;
     }
+
     &:after {
+      position: relative;
+      content: '';
       background-color: $textColor;
       display: block;
-      position: relative;
-      content: "";
       height: 2px;
       width: 0;
       top: -50%;
       cursor: pointer;
       transition: width 0.3s ease-in-out;
     }
+
     &:hover:after {
-      width: 100%;
-    }
-    &:focus:after {
       width: 100%;
     }
   }

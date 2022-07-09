@@ -1,4 +1,5 @@
 @import "../../common/styles/scss/variables";
+@import "../../common/styles/scss/mixins";
 
 .projectsBlock {
   background-color: $firstBgColor;
@@ -10,9 +11,7 @@
     padding-right: 15px;
     .projects {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      @include flex(space-between);
 
       @media screen and (max-width: 992px) {
         justify-content: space-around;

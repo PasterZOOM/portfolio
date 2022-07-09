@@ -1,4 +1,5 @@
 @import "../../../common/styles/scss/variables";
+@import "../../../common/styles/scss/mixins";
 
 .project {
   &:nth-child(3) {
@@ -14,25 +15,21 @@
   }
 
   .img {
+    @include flex(center);
     height: 350px;
     width: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-size: 150%;
     background-position: center;
     position: relative;
     transition: .4s ease-in-out;
 
     &:before {
-      opacity: 0;
       position: absolute;
       content: '';
       background-color: $projectBlurColor;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
       transition: .4s ease-in-out;
     }
 
@@ -58,52 +55,31 @@
     }
 
     .zoomIcon {
-      background: $zoomProjectIconColor;
-      border-radius: 50%;
-      display: inline-block;
-      font-size: 26px;
-      height: 60px;
-      width: 60px;
-      line-height: 60px;
-      cursor: pointer;
-      position: relative;
+      @include text($awesome, 26px, 900, $buttonTextColor);
+      @include icon ('\f0c1', 60px, none, $zoomProjectIconColor);
       opacity: 0;
-      z-index: 2;
+      cursor: pointer;
       transition: .4s ease-in-out;
 
-      &:before {
-        position: absolute;
-        content: '\f0c1';
-        color: $buttonTextColor;
-        width: 100%;
-        text-align: center;
-        display: block;
-        font-family: 'Font Awesome 5 Free', sans-serif;
-        font-weight: 900;
-      }
     }
 
     .title {
       position: absolute;
       bottom: 0;
       text-align: left;
-      font-weight: 400;
       left: 30px;
       opacity: 0;
       transition: .3s .1s ease-in-out;
 
       a {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 24px;
+        @include text($montserrat, 24px, 400, $paragraphTextColor);
         text-decoration: none;
         color: $paragraphTextColor;
       }
 
-      p {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        font-size: 14px;
-        color: $textColor;
+      span {
+        @include text($montserrat, 14px, 400, $textColor);
+        display: block;
       }
     }
   }
@@ -115,8 +91,7 @@
 
   :hover .zoomIcon {
     opacity: 1;
-    color: $buttonTextColor;
-    transition: .3s ease-in-out;
+    transition: .4s ease-in-out;
   }
 
   :hover .title {
