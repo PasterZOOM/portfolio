@@ -15,6 +15,7 @@
       justify-content: center;
       text-align: center;
     }
+
     .inscription {
       span {
         @include text($montserrat, 13px, 400, $paragraphTextColor);
@@ -35,13 +36,14 @@
           text-decoration: none;
           padding: 0 15px;
           transition: 0.4s;
-        }
 
-        :hover {
-          color: $titleTextColor;
-          transition: 0.4s;
+          &:hover {
+            color: $titleTextColor;
+            transition: 0.4s;
+          }
         }
       }
+
       @media screen and (max-width: 427px) {
         padding-top: 20px;
       }

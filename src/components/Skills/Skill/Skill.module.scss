@@ -51,20 +51,19 @@
       line-height: 24px;
       margin: 0 0 15px;
     }
-  }
 
-  .single:hover {
-    box-shadow: 0 2px 20px $skillShadowColor;
-    transition: .4s ease;
-  }
+    &:hover {
+      box-shadow: 0 2px 20px $skillShadowColor;
+      transition: .4s ease;
 
-  .single:hover .icon {
-    box-shadow: 0 2px 10px #eeeeee;
-    background-color: $titleTextColor;
-    color: $buttonTextColor;
-    transition: .4s ease;
+      .icon {
+        box-shadow: 0 2px 10px #eeeeee;
+        background-color: $titleTextColor;
+        color: $buttonTextColor;
+        transition: .4s ease;
+      }
+    }
   }
-
 }
 
 

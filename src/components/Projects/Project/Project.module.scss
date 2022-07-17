@@ -32,7 +32,7 @@
       height: 100%;
       transition: .4s ease-in-out;
       @media screen and (max-width: 716px) {
-        opacity:0.8;
+        opacity: 0.8;
       }
     }
 
@@ -59,7 +59,7 @@
 
     .zoomIcon {
       @include text($awesome, 26px, 900, $buttonTextColor);
-      @include icon ('\f0c1', 60px, none, $zoomProjectIconColor);
+      @include icon('\f0c1', 60px, none, $zoomProjectIconColor);
       opacity: 0;
       cursor: pointer;
       transition: .4s ease-in-out;
@@ -91,29 +91,30 @@
         display: block;
       }
     }
+
     @media screen and (max-width: 716px) {
       background-size: 200%;
     }
-  }
 
-  :hover {
-    background-size: 200%;
-    transition: background-size .4s ease-in-out;
-  }
+    &:hover {
+      background-size: 200%;
+      transition: background-size .4s ease-in-out;
 
-  :hover .zoomIcon {
-    opacity: 1;
-    transition: .4s ease-in-out;
-  }
+      .title {
+        bottom: 40px;
+        opacity: 1;
+        transition: .3s .1s ease-in-out;
+      }
 
-  :hover .title {
-    bottom: 40px;
-    opacity: 1;
-    transition: .3s .1s ease-in-out;
-  }
+      .zoomIcon {
+        opacity: 1;
+        transition: .4s ease-in-out;
+      }
 
-  :hover::before {
-    opacity: 0.8;
-    transition: .4s ease-in-out;
+      &::before {
+        opacity: 0.8;
+        transition: .4s ease-in-out;
+      }
+    }
   }
 }

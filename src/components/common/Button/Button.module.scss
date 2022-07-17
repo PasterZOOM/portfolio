@@ -1,7 +1,7 @@
 @import "../../../common/styles/scss/variables";
 @import "../../../common/styles/scss/mixins";
 
-.buttonBlock{
+.buttonBlock {
   button {
     @include text($montserrat, 14px, 700, $buttonTextColor);
     padding: 0 50px;
@@ -10,10 +10,11 @@
     min-height: 47px;
     text-transform: uppercase;
     transition: 0.4s;
-  }
-  :hover{
-    background-color: $buttonHoverColor;
-    cursor: pointer;
-    transition: 0.4s;
+
+    &:hover {
+      background-color: $buttonHoverColor;
+      cursor: pointer;
+      transition: 0.4s;
+    }
   }
 }
